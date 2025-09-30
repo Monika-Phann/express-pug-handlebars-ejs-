@@ -1,13 +1,11 @@
 const express = require('express');
-const { engine } = require('express-handlebars');
 
 const app = express();
 
 const users = [];
 
 // configure handlebars
-app.engine('hbs', engine({ extname: 'hbs' }));
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 // built-in middleware instead of body-parser
